@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>or
+</head>
+<body>
+
+    <p>당신의 레벨은 무엇입니까?</p>
+    <p class="level-text"></p>
+
+    <script>
+        let level=prompt('Enter your Level(A/B/C)');
+        // 제어문
+        
+        switch(level) {
+            case 'A' :
+                document.querySelector('.level-text').innerHTML='VIP Level';
+                break;
+            case 'B' :
+                document.querySelector('.level-text').innerHTML='Basic Level';           
+                break;
+            default :
+                document.querySelector('.level-text').innerHTML='No Level';
+                break;
+        }
+        //switch 문법은 if문과 비슷하지만 다른 값을 가지고 있습니다.
+        // 제어하는 문법입니다. 그래서 break가 제어하겠다는 뜻이 됩니다.
+
+    </script>
+</body>
+</html>

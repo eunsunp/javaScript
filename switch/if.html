@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>if문 (조건문)</title>
+    <style>
+        .tableContent {
+            border: 1px solid #111;
+            border-collapse: collapse;
+        }
+
+        .tableContent thead {
+            background-color: rgb(235, 235, 235);
+        }
+
+        .tableContent th,td {
+            border-top: 1px solid #111;
+            text-align: center;
+            padding: 10px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <table class="tableContent">
+        <thead>
+            <tr>
+                <th>연산자</th>
+                <td>연산자 설명</td>
+            </tr>
+            <tr>
+                <th>&&</th>
+                <td>AND 연산자</td>
+            </tr>
+            <tr>
+                <td>||</td>
+                <td>논리연산자</td>
+            </tr>
+            <tr>
+                <td>!</td>
+                <td>NOT 연산자</td>
+            </tr>
+        </thead>
+    </table>
+
+    <h1>if문 (조건문)</h1>
+    <p>당신의 점수는 몇점입니까?</p>
+    <p class="scoreNum"></p>
+
+    <script>
+        let score = Number(prompt("점수를 입력하세요", '예)80'));
+
+        if(score <= 100 && score >= 90){
+            document.querySelector('.scoreNum').innerHTML="A등급";
+        } else if(score <= 90 && score >= 80){
+            document.querySelector('.scoreNum').innerHTML="B등급"; 
+        } else if(score <= 80 && score >= 70){
+            document.querySelector('.scoreNum').innerHTML="C등급"; 
+        } else if(score <= 70 && score >= 60){
+            document.querySelector('.scoreNum').innerHTML="D등급";
+        } else if(score >= 101) {
+            alert('값을 잘못 입력하셨습니다.')
+        } else {
+            document.querySelector('.scoreNum').innerHTML="탈락";
+        }
+    </script>
+</body>
+</html>

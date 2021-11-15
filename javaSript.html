@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javaScript</title>
+</head>
+<body>
+    <button onclick="clearInterval(timer)">STOP</button>
+    <p class="num"></p>
+    <p class="text"></p>
+    <script>
+        let num = 0;
+
+        let timer = setInterval(function(){
+            document.querySelector('.num').innerHTML=num++;
+        },1000)
+
+         //setInterval 무한반복 함수
+        // ()초 이후에 무한 실행을 시킴
+
+        let timer2 = setTimeout(function(){
+            document.querySelector('.text').innerHTML=num++;
+        },2000)
+
+        // ()초 이후 한 한번만 실행되어지는 함수
+
+    </script>
+</body>
+</html>

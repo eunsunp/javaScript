@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo-List</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .wrap h1 {
+            text-align: center;
+        }
+        .form {
+            display: flex;
+            justify-content: center;
+        }
+        .list-content {
+            text-align: center;
+        }
+        input {
+            padding: 5px;
+            margin-right: 5px;
+        }
+        button {
+            padding: 3px;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <h1>TO DO LIST</h1>
+    </div>
+    <div class="form">
+        <div class="form-text-content">
+            <input type="text" name="" id="input">
+        </div>
+        <div class="form-btn-content">
+            <button class="form-btn">입력</button>
+        </div>
+    </div>
+    <div class="list-content">
+        <ul class="list">
+            <li>helloWorld</li>
+        </ul>
+    </div>
+
+    <script>
+
+        let button = document.querySelector('.form-btn');
+        let input = document.querySelector('#input');
+        let list = document.querySelector('.list');
+
+        button.addEventListener('click', clickButton)
+
+        function clickButton(){
+            let temp = document.createElement('li');
+            temp.innerHTML = input.value;
+            list.appendChild(temp)
+        }
+
+    </script>
+</body>
+</html>
